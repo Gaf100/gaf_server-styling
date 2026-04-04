@@ -1,0 +1,24 @@
+{
+  "name": "@gaf/ui",
+  "version": "1.0.0",
+  "description": "Shared design tokens and base styles for GAF web apps",
+  "type": "module",
+  "files": [
+    "*.css",
+    "README.md"
+  ],
+  "exports": {
+    "./tokens.css": "./tokens.css",
+    "./base.css": "./base.css",
+    "./components.css": "./components.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/gaf_server.git",
+    "directory": "styling"
+  },
+  "license": "UNLICENSED"
+}

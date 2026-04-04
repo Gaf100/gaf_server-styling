@@ -1,0 +1,43 @@
+/**
+ * Shared utility components — from server App.css (.btn suite).
+ * Import after base.css.
+ */
+.btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: var(--gaf-radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+}
+
+.btn-primary {
+  background: var(--gaf-gradient-primary);
+  color: white;
+  box-shadow: var(--gaf-shadow-btn-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--gaf-shadow-btn-primary-hover);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--gaf-primary-from);
+  border: 2px solid var(--gaf-primary-from);
+}
+
+.btn-secondary:hover {
+  background: var(--gaf-primary-from);
+  color: white;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
