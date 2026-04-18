@@ -1,4 +1,3 @@
-import { Alert } from '@gaf/ui'
 import './StatusMessage.css'
 
 /**
@@ -12,16 +11,16 @@ function StatusMessage({ error, success, onDismissError, onDismissSuccess }) {
   return (
     <div className="status-message-container">
       {error && (
-        <div className="status-message-item">
-          <Alert type="error">{error}</Alert>
+        <div className="status-message-item status-message-error">
+          <div className="status-message-content">{error}</div>
           {onDismissError && (
             <button className="status-dismiss" onClick={onDismissError}>×</button>
           )}
         </div>
       )}
       {success && (
-        <div className="status-message-item">
-          <Alert type="success">{success}</Alert>
+        <div className="status-message-item status-message-success">
+          <div className="status-message-content">{success}</div>
           {onDismissSuccess && (
             <button className="status-dismiss" onClick={onDismissSuccess}>×</button>
           )}
