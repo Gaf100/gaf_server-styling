@@ -30,7 +30,3 @@ export { default as LoadingSpinner } from './LoadingSpinner.jsx'
 
 // Action components
 export { default as GenericButton } from './GenericButton.jsx'
-
-// Navigation & routing
-export { default as Navigation } from './Navigation.jsx'
-export { default as ProtectedRoute } from './ProtectedRoute.jsx'
