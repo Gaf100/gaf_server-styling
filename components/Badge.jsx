@@ -1,7 +1,9 @@
+import './Badge.css'
+
 /**
  * Badge component — small labeled tags.
  */
-export function Badge({
+function Badge({
   variant = 'default',
   children,
   className = '',
@@ -19,3 +21,5 @@ export function Badge({
     </span>
   )
 }
+
+export default Badge

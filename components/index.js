@@ -2,13 +2,9 @@
  * @gaf/ui components — exported for use in React apps.
  */
 // Base components (from original styling directory)
-export { Button } from './Button.jsx'
-export { Table } from './Table.jsx'
-export { Card } from './Card.jsx'
-export { Alert } from './Alert.jsx'
-export { Badge } from './Badge.jsx'
-export { FormGroup } from './FormGroup.jsx'
-export { Input } from './Input.jsx'
+
+export { default as Card } from './Card.jsx'
+export { default as Badge } from './Badge.jsx'
 
 // Form components
 export { default as TextInput } from './TextInput.jsx'

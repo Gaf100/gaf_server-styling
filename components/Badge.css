@@ -1,0 +1,45 @@
+@import '@gaf/ui/tokens.css';
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: var(--gaf-gray-200);
+  color: var(--gaf-gray-800);
+  transition: all 0.2s ease;
+}
+
+.badge-default {
+  background-color: var(--gaf-gray-200);
+  color: var(--gaf-gray-800);
+}
+
+.badge-success {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: var(--gaf-success);
+}
+
+.badge-warning {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: var(--gaf-warning);
+}
+
+.badge-danger {
+  background-color: rgba(220, 53, 69, 0.15);
+  color: var(--gaf-danger);
+}
+
+.badge-info {
+  background-color: rgba(23, 162, 184, 0.15);
+  color: var(--gaf-info);
+}
+
+@media (max-width: 640px) {
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
