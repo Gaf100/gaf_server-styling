@@ -6,17 +6,21 @@
   --gaf-font-sans: 'Alef', 'Aleph', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+  /* Base colors */
   --gaf-color-text: #213547;
   --gaf-color-surface: #ffffff;
   --gaf-color-page: #f7f8fb;
 
+  /* Primary gradient */
   --gaf-primary-from: #667eea;
   --gaf-primary-to: #764ba2;
   --gaf-gradient-primary: linear-gradient(135deg, var(--gaf-primary-from) 0%, var(--gaf-primary-to) 100%);
 
+  /* Link colors */
   --gaf-link: #646cff;
   --gaf-link-hover: #535bf2;
 
+  /* Text colors */
   --gaf-color-heading: #111827;
   --gaf-color-muted: #5b6270;
   --gaf-color-muted-600: #6b7280;
@@ -24,30 +28,65 @@
   --gaf-color-muted-700: #374151;
   --gaf-color-muted-500: #4b5563;
 
+  /* Semantic status colors */
+  --gaf-success: #28a745;
+  --gaf-success-light: #d4edda;
+  --gaf-success-dark: #155724;
+  --gaf-danger: #dc3545;
+  --gaf-danger-light: #fee;
+  --gaf-danger-dark: #c33;
+  --gaf-info: #17a2b8;
+  --gaf-info-light: #d1ecf1;
+  --gaf-info-dark: #0c5460;
+  --gaf-warning: #ffc107;
+  --gaf-warning-light: #fff3cd;
+  --gaf-warning-dark: #856404;
+
+  /* Gray scale */
+  --gaf-gray-100: #f8f9fa;
+  --gaf-gray-200: #e9ecef;
+  --gaf-gray-300: #dee2e6;
+  --gaf-gray-400: #ccc;
+  --gaf-gray-500: #6c757d;
+  --gaf-gray-600: #666;
+  --gaf-gray-700: #495057;
+  --gaf-gray-800: #333;
+  --gaf-gray-900: #212529;
+
+  /* Radius */
   --gaf-radius-sm: 8px;
   --gaf-radius-md: 12px;
   --gaf-radius-lg: 16px;
   --gaf-radius-card: 18px;
   --gaf-radius-pill: 999px;
 
+  /* Shadows */
   --gaf-shadow-card: 0 10px 28px rgba(0, 0, 0, 0.06);
   --gaf-shadow-card-soft: 0 6px 20px rgba(0, 0, 0, 0.04);
   --gaf-shadow-btn-primary: 0 4px 15px rgba(102, 126, 234, 0.4);
   --gaf-shadow-btn-primary-hover: 0 6px 20px rgba(102, 126, 234, 0.6);
+  --gaf-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --gaf-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --gaf-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
 
+  /* Borders */
   --gaf-border-hairline: 1px solid rgba(0, 0, 0, 0.04);
   --gaf-border-subtle: 1px solid rgba(0, 0, 0, 0.08);
   --gaf-border-default: 1px solid rgba(0, 0, 0, 0.12);
+  --gaf-border-light: 1px solid #e9ecef;
 
+  /* Input */
   --gaf-input-bg: #fbfbfe;
   --gaf-chip-accent-bg: rgba(102, 126, 234, 0.12);
   --gaf-chip-accent-color: #3846b5;
   --gaf-chip-accent-border: 1px solid rgba(102, 126, 234, 0.25);
   --gaf-nav-active-color: #3846b5;
 
+  /* App background */
   --gaf-app-page-bg: radial-gradient(1200px 500px at 10% 0%, rgba(102, 126, 234, 0.12), transparent 55%),
     radial-gradient(900px 400px at 100% 10%, rgba(118, 75, 162, 0.12), transparent 55%),
     var(--gaf-color-page);
 
+  /* Buttons */
   --gaf-button-default-bg: #1a1a1a;
 }
