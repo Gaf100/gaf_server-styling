@@ -1,12 +1,12 @@
 {
   "name": "@gaf/ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared design tokens, base styles, and React components for GAF web apps",
   "type": "module",
   "main": "./components/index.js",
   "files": [
     "*.css",
-    "components/",
+    "components",
     "README.md"
   ],
   "exports": {
