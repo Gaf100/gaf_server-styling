@@ -1,28 +1,21 @@
+import './Card.css'
+
 /**
- * Card component — container with shadow and padding.
+ * Card container component
+ * @param {React.ReactNode} children - Card content
+ * @param {string} title - Optional card title
+ * @param {string} className - Additional CSS classes
+ * @param {string} variant - Card style: 'default', 'outlined', 'elevated'
  */
-export function Card({ 
-  children, 
-  className = '',
-  header = null,
-  footer = null,
-  ...props 
-}) {
+function Card({ children, title, className = '', variant = 'default', ...props }) {
   return (
-    <div className={`card ${className}`} {...props}>
-      {header && (
-        <div className="card-header">
-          {typeof header === 'string' ? <h3>{header}</h3> : header}
-        </div>
-      )}
-      <div className="card-body">
+    <div className={`card card-${variant} ${className}`} {...props}>
+      {title && <h3 className="card-title">{title}</h3>}
+      <div className="card-content">
         {children}
       </div>
-      {footer && (
-        <div className="card-footer">
-          {typeof footer === 'string' ? <p>{footer}</p> : footer}
-        </div>
-      )}
     </div>
   )
 }
+
+export default Card

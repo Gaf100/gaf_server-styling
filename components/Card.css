@@ -1,0 +1,61 @@
+@import '@gaf/ui/tokens.css';
+
+.card {
+  border-radius: var(--gaf-radius-md);
+  background-color: var(--gaf-color-surface);
+  transition: all 0.2s ease;
+}
+
+.card-default {
+  box-shadow: var(--gaf-shadow-md);
+  padding: 1.5rem;
+}
+
+.card-default:hover {
+  box-shadow: var(--gaf-shadow-lg);
+}
+
+.card-outlined {
+  border: 2px solid var(--gaf-border-subtle);
+  padding: 1.5rem;
+}
+
+.card-outlined:hover {
+  border-color: var(--gaf-primary-from);
+}
+
+.card-elevated {
+  box-shadow: var(--gaf-shadow-lg);
+  padding: 1.5rem;
+}
+
+.card-elevated:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--gaf-shadow-xl);
+}
+
+.card-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gaf-color-text);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gaf-border-subtle);
+}
+
+.card-content {
+  color: var(--gaf-color-text);
+}
+
+@media (max-width: 640px) {
+  .card-default,
+  .card-outlined,
+  .card-elevated {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+}

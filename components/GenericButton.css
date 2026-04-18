@@ -1,0 +1,104 @@
+@import '@gaf/ui/tokens.css';
+
+.generic-btn {
+  border: none;
+  border-radius: var(--gaf-radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--gaf-font-sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+/* Size variants */
+.generic-btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.generic-btn-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.generic-btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Default styling - customize by adding className */
+.generic-btn {
+  background-color: var(--gaf-gray-500);
+  color: var(--gaf-color-surface);
+  box-shadow: var(--gaf-shadow-md);
+}
+
+.generic-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--gaf-shadow-lg);
+}
+
+.generic-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--gaf-shadow-md);
+}
+
+.generic-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Color modifiers - use as className */
+.btn-primary {
+  background: var(--gaf-gradient-primary);
+  color: var(--gaf-color-surface);
+}
+
+.btn-success {
+  background-color: var(--gaf-success);
+  color: var(--gaf-color-surface);
+}
+
+.btn-danger {
+  background-color: var(--gaf-danger);
+  color: var(--gaf-color-surface);
+}
+
+.btn-warning {
+  background-color: var(--gaf-warning);
+  color: var(--gaf-color-text);
+}
+
+.btn-info {
+  background-color: var(--gaf-info);
+  color: var(--gaf-color-surface);
+}
+
+.btn-secondary {
+  background-color: var(--gaf-gray-300);
+  color: var(--gaf-color-text);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--gaf-color-text);
+  border: 2px solid var(--gaf-border-subtle);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--gaf-gray-100);
+}
+
+/* Alternative versions */
+.btn-light {
+  background-color: var(--gaf-gray-100);
+  color: var(--gaf-color-text);
+}
+
+.btn-light:hover:not(:disabled) {
+  background-color: var(--gaf-gray-200);
+}

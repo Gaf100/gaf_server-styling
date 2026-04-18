@@ -1,0 +1,68 @@
+@import '@gaf/ui/tokens.css';
+
+.text-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.text-input-label {
+  font-weight: 600;
+  color: var(--gaf-color-text);
+  font-size: 0.95rem;
+}
+
+.text-input-required {
+  color: var(--gaf-danger);
+  margin-left: 0.25rem;
+}
+
+.text-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gaf-gray-300);
+  border-radius: var(--gaf-radius-sm);
+  font-size: 1rem;
+  font-family: var(--gaf-font-sans);
+  color: var(--gaf-color-text);
+  background-color: var(--gaf-color-surface);
+  transition: all 0.2s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--gaf-primary-from);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.text-input:disabled {
+  background-color: var(--gaf-gray-100);
+  color: var(--gaf-gray-500);
+  cursor: not-allowed;
+}
+
+.text-input-error {
+  border-color: var(--gaf-danger);
+}
+
+.text-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+  border-color: var(--gaf-danger);
+}
+
+.text-input-error-message {
+  font-size: 0.875rem;
+  color: var(--gaf-danger);
+  font-weight: 500;
+}
+
+.text-input-hint {
+  font-size: 0.875rem;
+  color: var(--gaf-gray-500);
+}
+
+@media (max-width: 640px) {
+  .text-input {
+    font-size: 16px;
+  }
+}

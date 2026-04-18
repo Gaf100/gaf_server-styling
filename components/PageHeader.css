@@ -1,0 +1,29 @@
+.page-header {
+  margin: var(--gaf-spacing-lg, 20px) 0 var(--gaf-spacing-xl, 30px) 0;
+  padding: var(--gaf-spacing-lg, 20px) 0;
+  border-bottom: none;
+}
+
+.page-header-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gaf-gray-900);
+  margin: 0 0 var(--gaf-spacing-md, 10px) 0;
+}
+
+.page-header-subtitle {
+  font-size: 16px;
+  color: var(--gaf-gray-600);
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .page-header-title {
+    font-size: 24px;
+  }
+
+  .page-header-subtitle {
+    font-size: 14px;
+  }
+}

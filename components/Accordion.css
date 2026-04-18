@@ -1,0 +1,91 @@
+@import '@gaf/ui/tokens.css';
+
+.accordion {
+  width: 100%;
+  border: 2px solid var(--gaf-border-subtle);
+  border-radius: var(--gaf-radius-md);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 2px solid var(--gaf-border-subtle);
+  transition: all 0.2s ease;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--gaf-color-surface);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gaf-color-text);
+  transition: all 0.2s ease;
+  direction: rtl;
+  text-align: right;
+}
+
+.accordion-header:hover {
+  background-color: var(--gaf-gray-50, rgba(102, 126, 234, 0.05));
+}
+
+.accordion-item-open .accordion-header {
+  background: var(--gaf-gray-50, rgba(102, 126, 234, 0.05));
+  color: var(--gaf-primary-from);
+}
+
+.accordion-title {
+  font-weight: 600;
+}
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.accordion-item-open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 1.5rem;
+  background-color: var(--gaf-color-surface);
+  color: var(--gaf-color-text);
+  border-top: 2px solid var(--gaf-border-subtle);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .accordion-header {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .accordion-content {
+    padding: 1rem;
+  }
+}

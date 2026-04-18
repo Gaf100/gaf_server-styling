@@ -1,0 +1,69 @@
+@import '@gaf/ui/tokens.css';
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.select-label {
+  font-weight: 600;
+  color: var(--gaf-color-text);
+  font-size: 0.95rem;
+}
+
+.select-required {
+  color: var(--gaf-danger);
+  margin-left: 0.25rem;
+}
+
+.select {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gaf-gray-300);
+  border-radius: var(--gaf-radius-sm);
+  font-size: 1rem;
+  font-family: var(--gaf-font-sans);
+  color: var(--gaf-color-text);
+  background-color: var(--gaf-color-surface);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  padding-left: 2.5rem;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--gaf-primary-from);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.select:disabled {
+  background-color: var(--gaf-gray-100);
+  color: var(--gaf-gray-500);
+  cursor: not-allowed;
+}
+
+.select-error {
+  border-color: var(--gaf-danger);
+}
+
+.select-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+  border-color: var(--gaf-danger);
+}
+
+.select-error-message {
+  font-size: 0.875rem;
+  color: var(--gaf-danger);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .select {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,155 @@
+@import '@gaf/ui/tokens.css';
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--gaf-color-surface);
+  border-radius: var(--gaf-radius-md);
+  box-shadow: var(--gaf-shadow-xl);
+  z-index: 1001;
+  max-height: 90vh;
+  overflow-y: auto;
+  direction: rtl;
+  text-align: right;
+}
+
+.modal-small {
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-medium {
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-large {
+  width: 90%;
+  max-width: 800px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gaf-border-subtle);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--gaf-color-text);
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gaf-gray-500);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--gaf-gray-100);
+  color: var(--gaf-color-text);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  color: var(--gaf-color-text);
+  line-height: 1.6;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--gaf-border-subtle);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--gaf-radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.modal-btn-primary {
+  background: var(--gaf-gradient-primary);
+  color: var(--gaf-color-surface);
+}
+
+.modal-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--gaf-shadow-lg);
+}
+
+.modal-btn-danger {
+  background-color: var(--gaf-danger);
+  color: var(--gaf-color-surface);
+}
+
+.modal-btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--gaf-shadow-lg);
+}
+
+.modal-btn-secondary {
+  background-color: var(--gaf-gray-200);
+  color: var(--gaf-color-text);
+}
+
+.modal-btn-secondary:hover {
+  background-color: var(--gaf-gray-300);
+}
+
+@media (max-width: 640px) {
+  .modal-small,
+  .modal-medium,
+  .modal-large {
+    width: 95%;
+    max-width: none;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-footer {
+    padding: 1rem;
+  }
+}
