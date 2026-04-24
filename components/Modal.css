@@ -1,11 +1,7 @@
 @import '@gaf/ui/tokens.css';
 
-html {
-  scrollbar-gutter: stable;
-}
-
 body.modal-open {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .modal-overlay {
