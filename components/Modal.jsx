@@ -13,12 +13,17 @@ import './Modal.css'
 function Modal({ isOpen, onClose, title, children, actions = [], size = 'medium' }) {
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('modal-open')
+      // Prevent body scroll and compensate for scrollbar width
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollbarWidth}px`
     } else {
-      document.body.classList.remove('modal-open')
+      document.body.style.overflow = 'unset'
+      document.body.style.paddingRight = '0px'
     }
     return () => {
-      document.body.classList.remove('modal-open')
+      document.body.style.overflow = 'unset'
+      document.body.style.paddingRight = '0px'
     }
   }, [isOpen])
 

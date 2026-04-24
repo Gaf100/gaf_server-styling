@@ -1,9 +1,5 @@
 @import '@gaf/ui/tokens.css';
 
-html {
-  overflow-y: scroll;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
