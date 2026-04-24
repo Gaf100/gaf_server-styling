@@ -1,7 +1,7 @@
 @import '@gaf/ui/tokens.css';
 
-body.modal-open {
-  overflow: scroll;
+html {
+  overflow-y: scroll;
 }
 
 .modal-overlay {
