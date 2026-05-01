@@ -2,6 +2,7 @@
  * Global base styles — match server frontend defaults (index.css).
  * Import after tokens.css.
  */
+  /* Base styles */
 :root {
   line-height: 1.5;
   font-weight: 400;
