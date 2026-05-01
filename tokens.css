@@ -89,4 +89,80 @@
 
   /* Buttons */
   --gaf-button-default-bg: #1a1a1a;
+
+  /* ItemExchange feature tokens (light mode) */
+  --ie-accent:      #5b50f0;
+  --ie-accent-soft: #ede9ff;
+  --ie-accent-dark: #4740d4;
+  --ie-bg:          #f2f3f8;
+  --ie-surface:     #ffffff;
+  --ie-border:      #e4e5f0;
+  --ie-border-dark: #c8cae0;
+  --ie-text:        #18192e;
+  --ie-muted:       #7e7f9a;
+  --ie-radius:      14px;
+  --ie-shadow-sm:   0 1px 4px rgba(60,60,120,0.07);
+  --ie-shadow-md:   0 4px 20px rgba(60,60,120,0.10);
+  --ie-shadow-lg:   0 12px 48px rgba(60,60,120,0.16);
+}
+
+[data-theme="dark"] {
+  /* ItemExchange feature tokens — synced with global dark mode */
+  --ie-accent:      #8b83ff;
+  --ie-accent-soft: #2a2854;
+  --ie-accent-dark: #b9b5ff;
+  --ie-bg:          #252b3d;
+  --ie-surface:     #1e2235;
+  --ie-border:      #30364d;
+  --ie-border-dark: #47506d;
+  --ie-text:        #e2e8f0;
+  --ie-muted:       #94a3b8;
+  --ie-shadow-sm:   0 1px 4px rgba(0,0,0,0.28);
+  --ie-shadow-md:   0 4px 20px rgba(0,0,0,0.34);
+  --ie-shadow-lg:   0 12px 48px rgba(0,0,0,0.48);
+
+  /* Base colors */
+  --gaf-color-text: #e2e8f0;
+  --gaf-color-surface: #1e2235;
+  --gaf-color-page: #111827;
+
+  /* Text colors */
+  --gaf-color-heading: #f1f5f9;
+  --gaf-color-muted: #94a3b8;
+  --gaf-color-muted-600: #94a3b8;
+  --gaf-color-muted-400: #64748b;
+  --gaf-color-muted-700: #cbd5e1;
+  --gaf-color-muted-500: #94a3b8;
+
+  /* Gray scale (inverted for dark) */
+  --gaf-gray-100: #1e2235;
+  --gaf-gray-200: #2d3347;
+  --gaf-gray-300: #3d4461;
+  --gaf-gray-400: #4d5575;
+  --gaf-gray-700: #94a3b8;
+  --gaf-gray-800: #cbd5e1;
+  --gaf-gray-900: #e2e8f0;
+
+  /* Input */
+  --gaf-input-bg: #1b2033;
+  --gaf-chip-accent-bg: rgba(102, 126, 234, 0.2);
+  --gaf-chip-accent-border: 1px solid rgba(102, 126, 234, 0.4);
+
+  /* Borders */
+  --gaf-border-hairline: 1px solid rgba(255, 255, 255, 0.04);
+  --gaf-border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --gaf-border-default: 1px solid rgba(255, 255, 255, 0.12);
+  --gaf-border-light: 1px solid #2d3347;
+
+  /* App background */
+  --gaf-app-page-bg: radial-gradient(1200px 500px at 10% 0%, rgba(102, 126, 234, 0.08), transparent 55%),
+    radial-gradient(900px 400px at 100% 10%, rgba(118, 75, 162, 0.08), transparent 55%),
+    var(--gaf-color-page);
+
+  /* Shadows (stronger for dark backgrounds) */
+  --gaf-shadow-card: 0 10px 28px rgba(0, 0, 0, 0.3);
+  --gaf-shadow-card-soft: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --gaf-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --gaf-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --gaf-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
