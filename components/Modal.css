@@ -1,5 +1,16 @@
 @import '@gaf/ui/tokens.css';
 
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -14,6 +25,10 @@
 }
 
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: var(--gaf-color-surface);
   border-radius: var(--gaf-radius-md);
   box-shadow: var(--gaf-shadow-xl);
@@ -22,6 +37,7 @@
   overflow-y: auto;
   direction: rtl;
   text-align: right;
+  animation: modalEnter 0.3s ease-out;
 }
 
 .modal-small {

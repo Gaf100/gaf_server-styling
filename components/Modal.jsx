@@ -30,7 +30,8 @@ function Modal({ isOpen, onClose, title, children, actions = [], size = 'medium'
   if (!isOpen) return null
 
   return (
-    <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <>
+      <div className="modal-overlay" onClick={onClose} />
       <div className={`modal modal-${size}`}>
         <div className="modal-header">
           <h2>{title}</h2>
@@ -56,7 +57,7 @@ function Modal({ isOpen, onClose, title, children, actions = [], size = 'medium'
           </div>
         )}
       </div>
-    </div>
+    </>
   )
 }
 
