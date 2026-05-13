@@ -13,7 +13,7 @@ import './GenericButton.css'
 function GenericButton({
   children,
   className = '',
-  variant = '',
+  variant = 'primary',
   size = 'medium',
   disabled = false,
   onClick,
