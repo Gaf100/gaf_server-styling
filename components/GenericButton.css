@@ -53,48 +53,48 @@
 }
 
 /* Color modifiers - use as className */
-.btn-primary {
+.generic-btn.btn-primary {
   background: var(--gaf-gradient-primary);
   color: var(--gaf-color-surface);
 }
 
-.btn-success {
+.generic-btn.btn-success {
   background-color: var(--gaf-success);
   color: var(--gaf-color-surface);
 }
 
-.btn-danger {
+.generic-btn.btn-danger {
   background-color: var(--gaf-danger);
   color: var(--gaf-color-surface);
 }
 
-.btn-warning {
+.generic-btn.btn-warning {
   background-color: var(--gaf-warning);
   color: var(--gaf-color-text);
 }
 
-.btn-info {
+.generic-btn.btn-info {
   background-color: var(--gaf-info);
   color: var(--gaf-color-surface);
 }
 
-.btn-secondary {
+.generic-btn.btn-secondary {
   background-color: var(--gaf-gray-300);
   color: var(--gaf-color-text);
 }
 
-.btn-outline {
+.generic-btn.btn-outline {
   background-color: transparent;
   color: var(--gaf-color-text);
   border: 2px solid var(--gaf-border-subtle);
 }
 
-.btn-outline:hover:not(:disabled) {
+.generic-btn.btn-outline:hover:not(:disabled) {
   background-color: var(--gaf-gray-100);
 }
 
 /* Alternative versions */
-.btn-light {
+.generic-btn.btn-light {
   background-color: var(--gaf-gray-100);
   color: var(--gaf-color-text);
 }
