@@ -13,19 +13,19 @@ import './GenericButton.css'
 function GenericButton({
   children,
   className = '',
-  variant = '',
+  variant = 'primary',
   size = 'medium',
   disabled = false,
   onClick,
   type = 'button',
   ...props
 }) {
-  const variantClass = variant ? `btn-${variant}` : ''
+  const variantClass = `generic-btn-${variant}`
   
   return (
     <button
       type={type}
-      className={`generic-btn generic-btn-${size} generic-btn-primary ${variantClass} ${className}`}
+      className={`generic-btn generic-btn-${size} ${variantClass} ${className}`}
       disabled={disabled}
       onClick={onClick}
       {...props}
