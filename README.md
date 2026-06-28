@@ -162,7 +162,7 @@ docker compose -f docker/docker-compose.dev.yml exec frontend npm install
 
 Then hard-refresh the browser (`Ctrl+Shift+R`).
 
-See also [server/README.md](../server/README.md#docker-dev-environment).
+See also [server/README.md — Docker workflow](../server/README.md#docker-workflow-recommended).
 
 ## CI (GitHub Actions)
 
