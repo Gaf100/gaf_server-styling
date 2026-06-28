@@ -116,13 +116,53 @@ From `styling/`:
 
 Consumers pin versions, e.g. `"@gaf/ui": "^1.0.0"`.
 
-## Consume via Git tag
+## Consume via Git (server frontend)
 
-After publishing to a repository:
+The main app in `server/frontend` pins `@gaf/ui` to a specific commit from [Gaf100/gaf_server-styling](https://github.com/Gaf100/gaf_server-styling):
 
 ```json
-"@gaf/ui": "git+https://github.com/your-org/gaf-ui.git#v1.0.0"
+"@gaf/ui": "git+https://github.com/Gaf100/gaf_server-styling.git#<commit-sha>"
 ```
+
+Use the **HTTPS** URL (not `github:` / `git+ssh`) so Docker builds can clone the repo without SSH keys.
+
+### After you publish styling changes
+
+From `server/frontend`:
+
+1. Copy the new commit SHA from `gaf_server-styling` (the commit you pushed to `main`).
+2. Update the hash in `package.json`:
+   ```json
+   "@gaf/ui": "git+https://github.com/Gaf100/gaf_server-styling.git#<new-commit-sha>"
+   ```
+3. Refresh the lockfile:
+   ```powershell
+   npm install
+   ```
+4. Commit both `package.json` and `package-lock.json`.
+
+### Refresh Docker dev
+
+Docker keeps its own `node_modules` volume, so a host-side `npm install` is not enough on its own. From the `server` directory:
+
+```powershell
+docker compose -f docker/docker-compose.dev.yml down
+docker compose -f docker/docker-compose.dev.yml build --no-cache frontend
+docker compose -f docker/docker-compose.dev.yml up
+```
+
+Or run `.\run_server.bat` after `down` + rebuild.
+
+If the app still serves an old `@gaf/ui` (for example a blank page after adding a new export), force a clean install inside the container:
+
+```powershell
+docker compose -f docker/docker-compose.dev.yml exec frontend npm cache clean --force
+docker compose -f docker/docker-compose.dev.yml exec frontend npm install
+```
+
+Then hard-refresh the browser (`Ctrl+Shift+R`).
+
+See also [server/README.md](../server/README.md#docker-dev-environment).
 
 ## CI (GitHub Actions)
 
