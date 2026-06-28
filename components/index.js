@@ -23,6 +23,7 @@ export { default as DataTable } from './DataTable.jsx'
 export { default as PageHeader } from './PageHeader.jsx'
 export { default as StatusMessage } from './StatusMessage.jsx'
 export { default as LoadingSpinner } from './LoadingSpinner.jsx'
+export { default as ProgressBar } from './ProgressBar.jsx'
 
 // Action components
 export { default as GenericButton } from './GenericButton.jsx'
